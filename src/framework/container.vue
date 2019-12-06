@@ -4,10 +4,10 @@
     <component :is="config.tag" v-bind="props">
       {{config.text}}
       <template v-if="config.children">
-        <container v-for="node in config.children" :config="node" :key="node.id"></container>
-      </template>
-      <template v-if="config.slots">
-        <container v-for="(node, name) in config.slots" :config="node" :slot="name" :key="node.id"></container>
+        <template v-for="node in config.children">
+          <container v-if="node.slot" :config="node" :slot="node.slot" :key="node.id"></container>
+          <container v-else :config="node" :key="node.id"></container>  
+        </template>
       </template>
     </component>
   </div>
