@@ -18,11 +18,11 @@ var page1 = {
             },
             {
                 id:3,
-                tag:"p",
+                tag:"Button",
                 text:"标题",
                 slot:'title'
             }
         ]
     }
 }
-export {page1}
+export default page1

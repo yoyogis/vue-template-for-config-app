@@ -13,6 +13,8 @@ Vue.use(iview)
 Vue.config.productionTip = false
 Vue.use(functions)
 
+Vue.prototype.$instances = {};
+
 new Vue({
   router,
   render: h => h(App)
